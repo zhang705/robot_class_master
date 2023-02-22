@@ -57,7 +57,6 @@ while currentTime < finalTime
     currenty = interp1(t,z(:,1),currentTime);
     plot(0,currenty,'ko');
     axis([-1,1,-0.0,1.5]);
-    title('Exercise3');
     currentTime = toc;
 
     set(gca,'Fontsize',fontsize);
@@ -108,13 +107,17 @@ for i =1:size(z,1)
     hold on;    
     
     plot(0, z(i,1),'ro');
+    title("加入弹簧");
     hold on;
     axis([-0.9,0.9,-0.0,1.5]);
     pause(0.005);
     hold off;
     
 end
-
+v = VideoWriter('exercise3.avi');
+open(v);
+writeVideo(v,F);
+close(v);
 end
 timeconsume=toc;
 

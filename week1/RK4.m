@@ -70,7 +70,7 @@ while currentTime < finalTime
     F(i)=getframe(gcf);
     i=i+1;
 end
-v = VideoWriter('exercise1.avi');
+v = VideoWriter('exercise4.avi');
 open(v);
 writeVideo(v,F);
 close(v);

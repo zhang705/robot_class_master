@@ -50,6 +50,7 @@ i=1;
 while currentTime < finalTime
     currentxy = interp1(t,[z(:,3) z(:,1)],currentTime);
     plot(currentxy(1),currentxy(2),'ro');
+    title("添加水平方向");
     axis([-1,3,-0.0,3]);
     currentTime = toc;
 
